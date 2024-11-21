@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bab4.dart';
 
 void main() {
   runApp(const ECommerceApp());
@@ -8,6 +9,7 @@ class ECommerceApp extends StatelessWidget {
   const ECommerceApp({super.key});
 
   @override
+
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Shoe-Store',
@@ -34,10 +36,18 @@ class HomeScreen extends StatelessWidget {
         ),
         title: const Text("Shoe-Store"),
         centerTitle: true,
-        actions: const [
+        actions:  [
           Icon(Icons.notifications, size: 24),
           SizedBox(width: 16),
-          Icon(Icons.shopping_cart, size: 24),
+          IconButton( 
+          icon: Icon(Icons.shopping_cart, size: 24),
+          onPressed: () {
+            Navigator.push(
+              context,
+                MaterialPageRoute(builder: (context) => Bab4())
+                );
+          },
+          ),
           SizedBox(width: 16),
         ],
       ),
