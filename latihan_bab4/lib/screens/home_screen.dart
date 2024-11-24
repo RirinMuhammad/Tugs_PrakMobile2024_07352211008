@@ -22,7 +22,7 @@ Future<List<Map<String, String>>> fetchNews() async {
 
       return data.map<Map<String, String>>((item) {
         return {
-          'imageUrl': 'https://events.hmti.unkhair.ac.id/storage/' + (item['image'] ?? ''),
+          'imageUrl': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_HIDR2r3ocmZDXR38DqRDpyh93hbrWadKFA&s' + (item['image'] ?? ''),
           'title': item['title']?.toString() ?? 'No Title',
           'author': item['author']?.toString() ?? 'Unknown',
           'description': item['content']?.toString() ?? 'No Description',
